@@ -9,9 +9,7 @@ module.exports = (color, author, title, description, fields, footer, image, disa
   color = "0x" + color;
   try {
     parseInt(color);
-    if (!author) return "No Author";
     if (!title) return "No Title";
-    if (!description) return "No Description";
     
     timestamp = new Date();
     if (disableTimestamp) timestamp = undefined;
