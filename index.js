@@ -7,7 +7,7 @@ module.exports = (color, author, title, description, fields, footer, image, disa
   if (!isValidHex(color)) return "Invalid Color";
   color = color.replace("#", "0x");
   try {
-    parseInt(color);
+    color = parseInt(color);
     if (!title) return "No Title";
     
     timestamp = new Date();
