@@ -8,7 +8,7 @@ module.exports = (color, author, title, description, fields, footer, image, disa
   color = color.replace("#", "0x");
   try {
     color = parseInt(color);
-    if (!title) return "No Title";
+    if (!color || isNaN(color)) color = 0xFFFFFF;
     
     timestamp = new Date();
     if (disableTimestamp) timestamp = undefined;
