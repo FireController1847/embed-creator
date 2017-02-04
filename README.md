@@ -1,6 +1,19 @@
 # Embed Creator
 A Discord Embed Creator
 
+# Simple
+```javascript
+const createEmbed = require("embed-creator");
+
+message.channel.sendEmbed(createEmbed(
+  "hex code color", "author object", "title",
+  "description",
+  "fields object",
+  "footer object",
+  "image URL", "true/false to disable timestamp"
+));
+```
+
 # Examples
 ## This is assuming you have basic knowledge of Discord.js
 
