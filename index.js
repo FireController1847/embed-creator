@@ -3,7 +3,7 @@ function isValidHex(hex) {
   return regex.test(hex);
 }
 
-module.exports = (color, author, title, description, fields, footer, image, disableTimestamp) {
+module.exports = (color, author, title, description, fields, footer, image, disableTimestamp) => {
   if (!isValidHex(color)) return "Invalid Color";
   color = color.replace("#");
   color = "0x" + color;
