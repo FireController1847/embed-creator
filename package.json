@@ -1,0 +1,24 @@
+{
+  "name": "embed-creator",
+  "description": "Discord Embed Creation",
+  "keywords": [
+    "discord",
+    "starter",
+    "kit",
+    "discord.js",
+    "embed",
+    "discord embed",
+    "code block",
+    "block",
+    "code",
+    "discord code block"
+  ],
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/firecontroller1847/embed-creator.git"
+  },
+  "author": "FireController#1847",
+  "main": "./index.js",
+  "license": "MIT"
+}
