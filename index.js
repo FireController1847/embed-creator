@@ -4,7 +4,7 @@ function isValidHex(hex) {
 }
 
 module.exports = (color, author, title, description, fields, footer, image, disableTimestamp) => {
-  if (!isValidHex(color)) return "Invalid Color";
+  if (!isValidHex(color)) color = "#FFFFFF";
   color = color.replace("#", "0x");
   try {
     color = parseInt(color);
