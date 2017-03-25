@@ -19,6 +19,7 @@ module.exports = (color, author, title, description, fields, footer, image, disa
       "title": title,
       "description": description,
       "timestamp": timestamp,
+      "fields": fields,
       "footer": footer,
       "image": {
         "url": image
