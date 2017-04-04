@@ -3,7 +3,7 @@ function isValidHex(hex) {
   return regex.test(hex);
 }
 
-module.exports = (color, author, title, description, fields, footer, image, disableTimestamp) => {
+module.exports = (color, author, title, description, fields, footer, images, disableTimestamp) => {
   if (!isValidHex(color)) color = "#FFFFFF";
   color = color.replace("#", "0x");
   try {
@@ -12,7 +12,11 @@ module.exports = (color, author, title, description, fields, footer, image, disa
     
     timestamp = new Date();
     if (disableTimestamp) timestamp = undefined;
-
+    
+    thumbnail = undefined;
+    image = undefined;
+    if (images && images.thumbnail) thumbnail = images.thumbnail;
+    if (images && images.image) image = images.image;
     return {
       "color": color,
       "author": author,
@@ -23,9 +27,12 @@ module.exports = (color, author, title, description, fields, footer, image, disa
       "footer": footer,
       "image": {
         "url": image
+      },
+      "thumbnail": {
+        "url": thumbnail
       }
     }
   } catch(e) {
-    return e.stack;
+    throw new Error(e);
   }
 }
