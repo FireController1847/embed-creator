@@ -6,7 +6,7 @@ A Discord Embed Creator
 ```javascript
 const createEmbed = require("embed-creator");
 
-message.channel.sendEmbed(createEmbed(
+message.channel.send(createEmbed(
   "hex code color", "author object", "title",
   "description",
   "fields object",
@@ -40,7 +40,7 @@ This example will show you how to use every part of embedCreator.
 ```javascript
 const createEmbed = require("embed-creator");
 
-message.channel.sendEmbed(createEmbed("#FEAFEA", 
+message.channel.send(createEmbed("#FEAFEA", 
   {"name": "Fire", "icon_url": message.author.avatarURL, "url": "https://www.google.com"}, "Title", "Description",
   [{"name": "Field 1", "value": "Value 1"}, {"name": "Field 2", "value": "Value 2"}],
   {"text": "This is footer text!", "iconURL": message.guild.iconURL}, 
