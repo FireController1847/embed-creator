@@ -20,7 +20,7 @@ message.channel.send(createEmbed(
 #FFFFFF, null, "Title", "Description", null, null, null, false
 ### Author
 ```javascript
-{"name": "Fire", "icon_url": message.guild.iconURL, "url": "https://www.google.com"}
+{"name": "Fire", "icon_url": message.guild.avatarURL("png", 2048), "url": "https://www.google.com"}
 ```
 ### Fields
 ```javascript
@@ -28,11 +28,11 @@ message.channel.send(createEmbed(
 ```
 ### Footer
 ```javascript
-{"text": "This is footer text!", "icon_url": message.guild.iconURL}
+{"text": "This is footer text!", "icon_url": message.guild.iconURL("png", 2048)}
 ```
 ### Images
 ```javascript
-{"thumbnail": message.guild.iconURL, "image": message.author.avatarURL}
+{"thumbnail": message.guild.iconURL("png", 2048), "image": message.author.avatarURL("png", 2048)}
 ```
 
 # Example
