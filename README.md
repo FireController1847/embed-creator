@@ -1,7 +1,8 @@
 # Embed Creator
+### Due to Discord.js removing sendEmbed from v12, you must now use .send with this module.
 A Discord Embed Creator
 
-# Simple
+# Key
 ## This module assumes you have basic knowledge of Discord.js.
 ```javascript
 const createEmbed = require("embed-creator");
@@ -13,6 +14,16 @@ message.channel.send(createEmbed(
   "footer object",
   "image object", "true/false to disable timestamp"
 ));
+```
+
+# Edit Example
+```javascript
+const createEmbed = require("embed-creator");
+message.channel.send("A message with no embed!").then(msg => {
+  msg.edit(createEmbed(
+    "#FFFFFF", null, "This message has an embed now! :D"
+  ));
+});
 ```
 
 # Object Examples
