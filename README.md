@@ -47,4 +47,4 @@ message.channel.send(createEmbed("#FEAFEA",
   {"thumbnail": message.guild.iconURL("png", 2048), "image": message.author.avatarURL("png", 2048)}, false
 ));
 ```
-![Example1](https://img.visual-fire.com/closw.png)
+![Example1](https://img.visual-fire.com/Saved/gn6tg.png)
