@@ -17,7 +17,7 @@ module.exports = (color, author, title, description, fields, footer, images, dis
     image = undefined;
     if (images && images.thumbnail) thumbnail = images.thumbnail;
     if (images && images.image) image = images.image;
-    return {
+    return {embed:{
       "color": color,
       "author": author,
       "title": title,
@@ -31,7 +31,7 @@ module.exports = (color, author, title, description, fields, footer, images, dis
       "thumbnail": {
         "url": thumbnail
       }
-    }
+    }}
   } catch(e) {
     throw new Error(e);
   }
