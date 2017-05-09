@@ -31,7 +31,7 @@ message.channel.send("A message with no embed!").then(msg => {
 #FFFFFF, null, "Title", "Description", null, null, null, false
 ### Author
 ```javascript
-{"name": "Fire", "icon_url": message.guild.avatarURL("png", 2048), "url": "https://www.google.com"}
+{"name": "Fire", "icon_url": message.guild.displayAvatarURL, "url": "https://www.google.com"}
 ```
 ### Fields
 ```javascript
@@ -39,11 +39,11 @@ message.channel.send("A message with no embed!").then(msg => {
 ```
 ### Footer
 ```javascript
-{"text": "This is footer text!", "icon_url": message.guild.iconURL("png", 2048)}
+{"text": "This is footer text!", "icon_url": message.guild.iconURL()}
 ```
 ### Images
 ```javascript
-{"thumbnail": message.guild.iconURL("png", 2048), "image": message.author.avatarURL("png", 2048)}
+{"thumbnail": message.guild.iconURL(), "image": message.author.displayAvatarURL}
 ```
 
 # Example
@@ -52,10 +52,10 @@ This example will show you how to use every part of embedCreator.
 const createEmbed = require("embed-creator");
 
 message.channel.send(createEmbed("#FEAFEA", 
-  {"name": "Fire", "icon_url": message.author.avatarURL("png", 2048), "url": "https://www.google.com"}, "Title", "Description",
+  {"name": "Fire", "icon_url": message.author.displayAvatarURL, "url": "https://www.google.com"}, "Title", "Description",
   [{"name": "Field 1", "value": "Value 1"}, {"name": "Field 2", "value": "Value 2"}],
-  {"text": "This is footer text!", "icon_url": message.guild.iconURL("png", 2048)}, 
-  {"thumbnail": message.guild.iconURL("png", 2048), "image": message.author.avatarURL("png", 2048)}, false
+  {"text": "This is footer text!", "icon_url": message.guild.iconURL()}, 
+  {"thumbnail": message.guild.iconURL(), "image": message.author.displayAvatarURL}, false
 ));
 ```
 ![Example1](https://img.visual-fire.com/Saved/gn6tg.png)
