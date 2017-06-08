@@ -3,11 +3,7 @@ function isValidHex(hex) {
   return regex.test(hex);
 }
 
-/**
- * @deprecated Since Discord v12 editing and sending of embeds has become available and this module is no longer required.
- */
 module.exports = (color, author, title, description, fields, footer, images, disableTimestamp) => {
-  console.warn("[embed-creator] Since Discord v12 editing and sending of embeds has become available and this module is no longer required.");
   if (!isValidHex(color)) color = "#FFFFFF";
   color = color.replace("#", "0x");
   try {
