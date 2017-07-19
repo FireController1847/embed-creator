@@ -4,9 +4,9 @@ A Discord Embed Creator
 
 # Key
 ```javascript
-const createEmbed = require("embed-creator");
+const ce = require("embed-creator");
 
-message.channel.send(createEmbed(
+msg.channel.send(ce(
   "hex code color", "author object", "title",
   "description",
   "fields object",
@@ -17,9 +17,9 @@ message.channel.send(createEmbed(
 
 # Edit Example
 ```javascript
-const createEmbed = require("embed-creator");
-message.channel.send("A message with no embed!").then(msg => {
-  msg.edit(createEmbed(
+const ce = require("embed-creator");
+msg.channel.send("A message with no embed!").then(theM => {
+  theM.edit(ce(
     "#FFFFFF", null, "This message has an embed now! :D"
   ));
 });
@@ -30,7 +30,7 @@ message.channel.send("A message with no embed!").then(msg => {
 #FFFFFF, null, "Title", "Description", null, null, null, false
 ### Author
 ```javascript
-{"name": "Fire", "icon_url": message.guild.displayAvatarURL(), "url": "https://www.google.com"}
+{"name": "Fire", "icon_url": msg.guild.displayAvatarURL(), "url": "https://www.google.com"}
 ```
 ### Fields
 ```javascript
@@ -38,23 +38,23 @@ message.channel.send("A message with no embed!").then(msg => {
 ```
 ### Footer
 ```javascript
-{"text": "This is footer text!", "icon_url": message.guild.iconURL()}
+{"text": "This is footer text!", "icon_url": msg.guild.iconURL()}
 ```
 ### Images
 ```javascript
-{"thumbnail": message.guild.iconURL(), "image": message.author.displayAvatarURL()}
+{"thumbnail": msg.guild.iconURL(), "image": msg.author.displayAvatarURL()}
 ```
 
 # Example
 This example will show you how to use every part of embedCreator.
 ```javascript
-const createEmbed = require("embed-creator");
+const ce = require("embed-creator");
 
-message.channel.send(createEmbed("#FEAFEA", 
-  {"name": "Fire", "icon_url": message.author.displayAvatarURL(), "url": "https://www.google.com"}, "Title", "Description",
+msg.channel.send(ce("#FEAFEA", 
+  {"name": "Fire", "icon_url": msg.author.displayAvatarURL(), "url": "https://www.google.com"}, "Title", "Description",
   [{"name": "Field 1", "value": "Value 1"}, {"name": "Field 2", "value": "Value 2"}],
-  {"text": "This is footer text!", "icon_url": message.guild.iconURL()}, 
-  {"thumbnail": message.guild.iconURL(), "image": message.author.displayAvatarURL()}, false
+  {"text": "This is footer text!", "icon_url": msg.guild.iconURL()}, 
+  {"thumbnail": msg.guild.iconURL(), "image": msg.author.displayAvatarURL()}, false
 ));
 ```
 ![Example1](https://img.visualfiredev.com/saved/gn6tg.png)
