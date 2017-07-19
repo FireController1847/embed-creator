@@ -11,7 +11,7 @@ msg.channel.send(ce(
   "description",
   "fields object",
   "footer object",
-  "image object", "true/false to disable timestamp"
+  "image object", "is timestamp enabled (true/false)"
 ));
 ```
 
@@ -50,9 +50,10 @@ This example will show you how to use every part of embedCreator.
 ```javascript
 const ce = require("embed-creator");
 
-msg.channel.send(ce("#FEAFEA", 
-  {"name": "Fire", "icon_url": msg.author.displayAvatarURL(), "url": "https://www.google.com"}, "Title", "Description",
-  [{"name": "Field 1", "value": "Value 1"}, {"name": "Field 2", "value": "Value 2"}],
+msg.channel.send(ce(
+  "#FEAFEA", {"name": "Fire", "icon_url": msg.author.displayAvatarURL(), "url": "https://www.google.com"}, "Title", "Description",
+  [{"name": "Field 1", "value": "Value 1"}, 
+   {"name": "Field 2", "value": "Value 2"}],
   {"text": "This is footer text!", "icon_url": msg.guild.iconURL()}, 
   {"thumbnail": msg.guild.iconURL(), "image": msg.author.displayAvatarURL()}, false
 ));
