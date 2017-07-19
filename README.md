@@ -1,9 +1,8 @@
 # Embed Creator
-### Due to Discord.js removing sendEmbed from v12, you must now use .send with this module.
+### This module assumes you have basic knowledge of Discord.js.
 A Discord Embed Creator
 
 # Key
-## This module assumes you have basic knowledge of Discord.js.
 ```javascript
 const createEmbed = require("embed-creator");
 
@@ -58,4 +57,4 @@ message.channel.send(createEmbed("#FEAFEA",
   {"thumbnail": message.guild.iconURL(), "image": message.author.displayAvatarURL}, false
 ));
 ```
-![Example1](https://img.visual-fire.com/Saved/gn6tg.png)
+![Example1](https://img.visualfiredev.com/saved/gn6tg.png)
