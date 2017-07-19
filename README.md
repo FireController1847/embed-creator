@@ -27,7 +27,9 @@ msg.channel.send("A message with no embed!").then(theM => {
 
 # Object Examples
 ### Hex, Title, Description, Timestamp
+```javascript
 #FFFFFF, null, "Title", "Description", null, null, null, false
+```
 ### Author
 ```javascript
 {"name": "Fire", "icon_url": msg.guild.displayAvatarURL(), "url": "https://www.google.com"}
