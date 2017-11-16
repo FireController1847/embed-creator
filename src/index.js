@@ -1,5 +1,5 @@
 module.exports = function createEmbed(color, author, title, description, fields, footer, images, disableTimestamp) {
-  if (!color || /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color)) color = '#FFFFFF';
+  if (!color || !(/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color))) color = '#FFFFFF';
   color = parseInt(color.replace('#', '0x'));
   if (!color || isNaN(color)) color = 0xFFFFFF;
   return {embed: {
