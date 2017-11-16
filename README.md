@@ -60,4 +60,4 @@ msg.channel.send(ce(
   {"thumbnail": msg.guild.iconURL(), "image": msg.author.displayAvatarURL()}, false
 ));
 ```
-![Example1](https://img.visualfiredev.com/saved/gn6tg.png)
+![Example1](https://cdn.discordapp.com/attachments/173146091640848384/380545818396196865/ygkp51.png)
