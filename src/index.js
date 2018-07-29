@@ -1,3 +1,6 @@
+/**
+ * @deprecated Creating embeds is a simple task that should not be done through one function. Please use Discord.js's functions instead.
+ */
 module.exports = function createEmbed(color, author, title, description, fields, footer, images, disableTimestamp) {
   if (!color || !(/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color))) color = '#FFFFFF';
   color = parseInt(color.replace('#', '0x'));
